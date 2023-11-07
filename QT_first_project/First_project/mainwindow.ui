@@ -30,7 +30,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -199,7 +199,7 @@
        <rect>
         <x>94</x>
         <y>10</y>
-        <width>161</width>
+        <width>81</width>
         <height>31</height>
        </rect>
       </property>
@@ -223,7 +223,7 @@
      <widget class="QPushButton" name="Reset">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>180</x>
         <y>10</y>
         <width>75</width>
         <height>31</height>
@@ -270,6 +270,19 @@
       </property>
       <property name="text">
        <string>Установоить будильник</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>264</x>
+        <y>10</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сохранить</string>
       </property>
      </widget>
     </widget>

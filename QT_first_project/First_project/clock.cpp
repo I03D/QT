@@ -25,6 +25,14 @@ void Clock::on_timer()
     }
 }
 
+bool Clock::isWorking() {
+    return timer->isActive();
+}
+
+int Clock::get() {
+    return(second);
+}
+
 void Clock::start() {
     if (not timer->isActive()) timer->start();
 }

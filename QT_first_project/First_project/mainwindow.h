@@ -5,7 +5,19 @@
 #include <QLCDNumber>
 #include <QTimer>
 
+#include <QSystemTrayIcon>
+#include <QCloseEvent>
+
+#include <QSettings>
+
 #include "clock.h"
+
+#define ORGANIZATION_NAME "RandomSoftwareCorp"
+#define ORGANIZATION_DOMAIN "www.rsc.ru"
+#define APPLICATION_NAME "QSettings Program"
+
+#define SETTINGS_TRAY "settings/tray"
+#define IS_WORKING "settings/is_working"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,12 +31,21 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void b_get();
+
 private:
     Ui::MainWindow *ui;
     Clock *clock;
     QTimer *timer;
+    QSystemTrayIcon *trayIcon;
+
+protected:
+    void closeEvent(QCloseEvent * event);
 
 private slots:
+    void iconActivated(QSystemTrayIcon::ActivationReason reason);
+    void on_saveButton_clicked();
+
     void b_alarm();
 
     void b_set();

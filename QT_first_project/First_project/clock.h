@@ -17,6 +17,9 @@ public:
     void reset();
     void set(int t);
     void set_alarm(int t);
+
+    int get();
+    bool isWorking();
 private:
     int second;
     int alarm;
